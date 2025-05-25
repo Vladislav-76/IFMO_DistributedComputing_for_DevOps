@@ -33,3 +33,13 @@
       Slave_IO_Running: {{ slave_status.Slave_IO_Running }}
       Slave_SQL_Running: {{ slave_status.Slave_SQL_Running }}
       Seconds_Behind_Master: {{ slave_status.Seconds_Behind_Master }}
+
+- name: Display Configuration Variables
+  ansible.builtin.debug:
+    msg:
+      - "wordpress: True" # True or False
+      - "wordpress_port: 80" # 80 or 8080 or whatewer
+      - "wordpress_db_name: {{ db_name }}" # WP database name
+      - "db_master: mysql" # container name
+      - "db_replica: mysql_slave" # container name
+      - "db_pass: {{ db_password }}" # root password for master and replica

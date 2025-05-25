@@ -1,5 +1,5 @@
 - name: Deploy WP + MySql
-  hosts: wp_servers
+  hosts: carrier
   become: yes
   roles:
     - wordpress

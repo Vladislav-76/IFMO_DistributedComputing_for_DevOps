@@ -115,3 +115,18 @@
     grafana_user: "{{ grafana_user }}"
     grafana_password: "{{ grafana_password }}"
     dashboard_url: "https://grafana.com/api/dashboards/12030/revisions/1/download"
+
+- name: Display Configuration Variables
+  ansible.builtin.debug:
+    msg:
+      - "wordpress: True" # True or False
+      - "wordpress_port: 80" # 80 or 8080 or whatewer
+      - "wordpress_db_name: {{ db_name }}" # WP database name
+      - "db1_host: mariadb_1" # container name
+      - "db2_host: mariadb_2" # container name
+      - "db3_host: mariadb_3" # container name
+      - "db4_host: mariadb_4" # container name
+      - "db5_host: mariadb_5" # container name
+      - "db_pass: {{ db_root_password }}" # root password for DBs
+      - "loadbalancer: haproxy" # container name
+      - "monitoring_url: http://localhost:3000" # monitoring url including port

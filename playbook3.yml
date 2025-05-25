@@ -1,5 +1,5 @@
 - name: Deploy Monitoring
-  hosts: wp_servers
+  hosts: carrier
   become: yes
   roles:
-    - galera
+    - monitoring
