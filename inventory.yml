@@ -1,7 +1,7 @@
 all:
   hosts:
     carrier:
-      ansible_host: 158.160.181.231
+      ansible_host: 158.160.180.182
       ansible_user: vlad
       # ansible_password: xxxxxxxx
       ansible_become_method: sudo

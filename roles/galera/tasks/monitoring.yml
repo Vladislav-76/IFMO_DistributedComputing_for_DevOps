@@ -129,4 +129,4 @@
       - "db5_host: mariadb_5" # container name
       - "db_pass: {{ db_root_password }}" # root password for DBs
       - "loadbalancer: haproxy" # container name
-      - "monitoring_url: http://localhost:3000" # monitoring url including port
+      - "monitoring_url: http://{{ ansible_host }}:3000" # monitoring url including port

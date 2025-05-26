@@ -1,3 +1,11 @@
+- name: Install mariadb-client
+  ansible.builtin.apt:
+    name: mariadb-client
+    state: latest
+
+- name: Reconnect
+  ansible.builtin.meta: reset_connection
+
 - name: Create 1-st db volume
   docker_volume:
     name: mariadb_1_data

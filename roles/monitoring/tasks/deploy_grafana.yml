@@ -52,4 +52,4 @@
 - name: Display Configuration Variables
   ansible.builtin.debug:
     msg:
-      - "monitoring_url: http://localhost:3000" # monitoring url including port
+      - "monitoring_url: http://{{ ansible_host }}:3000" # monitoring url including port

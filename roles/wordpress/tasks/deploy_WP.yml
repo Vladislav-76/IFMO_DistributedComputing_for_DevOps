@@ -22,5 +22,5 @@
       - "wordpress: True" # True or False
       - "wordpress_port: 80" # 80 or 8080 or whatewer
       - "wordpress_db_name: {{ db_name }}" # WP database name
-      - "db_host: {{ db_master_port }}" # container name
+      - "db_host: mysql" # container name
       - "db_pass: {{ db_password }}" # root password
